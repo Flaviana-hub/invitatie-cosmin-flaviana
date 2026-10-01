@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalii | Cosmin & Flaviana</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            background: #e9e2d6;
+
+            font-family:
+                'Cormorant Garamond',
+                serif;
+
+            color: #24503f;
+        }
+
+
+        /* PAGINA */
+
+        .page {
+            width: 100%;
+
+            max-width: 900px;
+
+            min-height: 100vh;
+
+            margin: 0 auto;
+
+            background: #faf6ed;
+
+            position: relative;
+
+            overflow: hidden;
+
+            text-align: center;
+        }
+
+
+        /* LEBEDE SUS */
+
+        .swans-top {
+            width: 100%;
+
+            height: 390px;
+
+            background-image:
+                url("fundal-invitatie.png");
+
+            background-size:
+                100% auto;
+
+            background-position:
+                center bottom;
+
+            background-repeat:
+                no-repeat;
+
+            position: relative;
+        }
+
+
+        .swans-top::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 100px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    transparent,
+                    #faf6ed
+                );
+        }
+
+
+        /* CONȚINUT */
+
+        .content {
+            position: relative;
+
+            padding:
+                10px
+                clamp(45px, 9vw, 110px)
+                80px;
+        }
+
+
+        /* CHENAR */
+
+        .content::before {
+            content: "";
+
+            position: absolute;
+
+            top: -20px;
+
+            left: 25px;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            border:
+                1px solid
+                rgba(174, 134, 52, 0.38);
+
+            pointer-events: none;
+        }
+
+
+        /* TITLU */
+
+        .details-label {
+            color: #24503f;
+
+            text-transform: uppercase;
+
+            letter-spacing: 4px;
+
+            font-size: 14px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .names {
+            width: 100%;
+
+            margin: 5px auto;
+
+            font-family:
+                'Great Vibes',
+                cursive;
+
+            font-size:
+                clamp(
+                    45px,
+                    8vw,
+                    80px
+                );
+
+            font-weight: 400;
+
+            color: #b28a36;
+
+            white-space: nowrap;
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .date {
+            color: #a47c2d;
+
+            font-size: 21px;
+
+            letter-spacing: 6px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* LINIE AURIE */
+
+        .gold-divider {
+            width: 130px;
+
+            height: 1px;
+
+            margin: 22px auto;
+
+            background:
+                linear-gradient(
+                    to right,
+                    transparent,
+                    #b28a36,
+                    transparent
+                );
+        }
+
+
+        /* INTRODUCERE */
+
+        .intro {
+            max-width: 620px;
+
+            margin: 25px auto 35px;
+
+            color: #315e4d;
+
+            font-size: 21px;
+
+            line-height: 1.6;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .intro strong {
+            color: #a47c2d;
+
+            font-weight: 500;
+        }
+
+
+        /* EVENIMENTE */
+
+        .event {
+            max-width: 620px;
+
+            margin: 25px auto;
+
+            padding: 28px 20px;
+
+            background:
+                rgba(
+                    255,
+                    253,
+                    247,
+                    0.78
+                );
+
+            border:
+                1px solid
+                rgba(
+                    174,
+                    134,
+                    52,
+                    0.48
+                );
+
+            border-radius: 14px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(
+                    70,
+                    50,
+                    20,
+                    0.07
+                );
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .event-icon {
+            font-size: 40px;
+        }
+
+
+        .event h2 {
+            margin:
+                7px
+                0
+                12px;
+
+            color: #a47c2d;
+
+            font-family:
+                'Great Vibes',
+                cursive;
+
+            font-size: 43px;
+
+            font-weight: 400;
+        }
+
+
+        .event-time {
+            color: #24503f;
+
+            font-size: 26px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .event-location {
+            color: #315e4d;
+
+            font-size: 21px;
+
+            line-height: 1.5;
+        }
+
+
+        .event-location strong {
+            color: #8e6b29;
+
+            font-weight: 600;
+        }
+
+
+        /* PĂRINȚI */
+
+        .blessing {
+            max-width: 700px;
+
+            margin: 45px auto;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .blessing-title {
+            color: #315e4d;
+
+            font-size: 22px;
+
+            line-height: 1.6;
+
+            margin-bottom: 28px;
+        }
+
+
+        .blessing-title strong {
+            color: #a47c2d;
+
+            font-weight: 500;
+        }
+
+
+        .parents {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+        }
+
+
+        .parent-box {
+            padding: 23px 15px;
+
+            background:
+                rgba(
+                    255,
+                    253,
+                    247,
+                    0.76
+                );
+
+            border:
+                1px solid
+                rgba(
+                    174,
+                    134,
+                    52,
+                    0.42
+                );
+
+            border-radius: 12px;
+        }
+
+
+        .parent-title {
+            color: #24503f;
+
+            font-size: 15px;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .family-name {
+            color: #a47c2d;
+
+            font-size: 26px;
+
+            font-weight: 500;
+        }
+
+
+        .parent-names {
+            color: #315e4d;
+
+            font-size: 20px;
+
+            margin-top: 4px;
+        }
+
+
+        /* NAȘI */
+
+        .godparents {
+            max-width: 480px;
+
+            margin: 25px auto 45px;
+
+            padding: 25px 20px;
+
+            background:
+                rgba(
+                    255,
+                    253,
+                    247,
+                    0.76
+                );
+
+            border:
+                1px solid
+                rgba(
+                    174,
+                    134,
+                    52,
+                    0.42
+                );
+
+            border-radius: 12px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .godparents-title {
+            color: #24503f;
+
+            font-size: 15px;
+
+            letter-spacing: 2px;
+
+            text-transform: uppercase;
+        }
+
+
+        .godparents-names {
+            margin-top: 10px;
+
+            color: #a47c2d;
+
+            font-family:
+                'Great Vibes',
+                cursive;
+
+            font-size: 37px;
+        }
+
+
+        /* MESAJ FINAL */
+
+        .final-message {
+            max-width: 600px;
+
+            margin: 50px auto 20px;
+
+            color: #315e4d;
+
+            font-size: 20px;
+
+            line-height: 1.6;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .signature {
+            margin-top: 22px;
+
+            color: #a47c2d;
+
+            font-family:
+                'Great Vibes',
+                cursive;
+
+            font-size: 39px;
+        }
+
+
+        /* ÎNAPOI */
+
+        .back {
+            display: inline-block;
+
+            margin-top: 30px;
+
+            color: #24503f;
+
+            text-decoration: none;
+
+            border-bottom:
+                1px solid #a47c2d;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        /* BUTON MUZICĂ */
+
+        .music-button {
+            position: fixed;
+
+            right: 18px;
+
+            bottom: 18px;
+
+            width: 50px;
+
+            height: 50px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid #b28a36;
+
+            background:
+                rgba(
+                    255,
+                    253,
+                    247,
+                    0.94
+                );
+
+            color: #a47c2d;
+
+            font-size: 22px;
+
+            cursor: pointer;
+
+            z-index: 999;
+
+            box-shadow:
+                0 5px 18px
+                rgba(
+                    70,
+                    50,
+                    20,
+                    0.18
+                );
+        }
+
+
+        /* TELEFON */
+
+        @media(max-width: 600px) {
+
+            .swans-top {
+                height: 250px;
+            }
+
+
+            .content {
+                padding:
+                    5px
+                    38px
+                    60px;
+            }
+
+
+            .content::before {
+                left: 14px;
+
+                right: 14px;
+            }
+
+
+            .names {
+                font-size:
+                    clamp(
+                        36px,
+                        10.5vw,
+                        53px
+                    );
+
+                white-space: nowrap;
+            }
+
+
+            .date {
+                font-size: 18px;
+
+                letter-spacing: 4px;
+            }
+
+
+            .intro {
+                font-size: 18px;
+            }
+
+
+            .parents {
+                grid-template-columns:
+                    1fr 1fr;
+
+                gap: 7px;
+            }
+
+
+            .parent-box {
+                padding:
+                    15px
+                    6px;
+            }
+
+
+            .parent-title {
+                font-size: 11px;
+
+                letter-spacing: 0;
+            }
+
+
+            .family-name {
+                font-size: 19px;
+            }
+
+
+            .parent-names {
+                font-size: 14px;
+            }
+
+
+            .event {
+                padding:
+                    23px
+                    12px;
+            }
+
+
+            .event h2 {
+                font-size: 37px;
+            }
+
+
+            .event-location {
+                font-size: 18px;
+            }
+
+
+            .godparents-names {
+                font-size: 31px;
+            }
+
+
+            .music-button {
+                width: 44px;
+
+                height: 44px;
+
+                right: 12px;
+
+                bottom: 12px;
+            }
+        }
+
+
+        @media(max-width: 390px) {
+
+            .content {
+                padding-left: 32px;
+
+                padding-right: 32px;
+            }
+
+
+            .names {
+                font-size: 37px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- MUZICA -->
+
+<audio
+    id="backgroundMusic"
+    preload="auto"
+>
+    <source
+        src="music.mp3"
+        type="audio/mpeg"
+    >
+</audio>
+
+
+<div class="page">
+
+
+    <!-- LEBEDE SUS -->
+
+    <div class="swans-top"></div>
+
+
+    <main class="content">
+
+
+        <!-- TITLU -->
+
+        <div class="details-label">
+            Detaliile zilei noastre
+        </div>
+
+
+        <h1 class="names">
+            Cosmin &amp; Flaviana
+        </h1>
+
+
+        <div class="date">
+            04 • 07 • 2027
+        </div>
+
+
+        <div class="gold-divider"></div>
+
+
+        <!-- INTRODUCERE -->
+
+        <div class="intro">
+
+            Cu binecuvântarea lui
+            <strong>Dumnezeu</strong>
+            și a părinților noștri,
+
+            <br>
+
+            împreună cu nașii noștri dragi,
+
+            <br>
+
+            vă invităm să ne fiți alături
+            în ziua în care ne vom uni
+            destinele înaintea lui Dumnezeu.
+
+        </div>
+
+
+        <!-- CUNUNIA RELIGIOASĂ -->
+
+        <section class="event">
+
+
+            <div class="event-icon">
+                ⛪
+            </div>
+
+
+            <h2>
+                Cununia religioasă
+            </h2>
+
+
+            <div class="event-time">
+                Ora 14:00
+            </div>
+
+
+            <div class="gold-divider"></div>
+
+
+            <div class="event-location">
+
+                Biserica
+
+                <strong>
+                    Sfinții Mihail și Gavriil
+                </strong>
+
+                <br>
+
+                Marginea
+
+            </div>
+
+
+        </section>
+
+
+        <!-- PETRECERE -->
+
+        <section class="event">
+
+
+            <div class="event-icon">
+                🥂
+            </div>
+
+
+            <h2>
+                Petrecerea
+            </h2>
+
+
+            <div class="event-time">
+                Ora 18:00
+            </div>
+
+
+            <div class="gold-divider"></div>
+
+
+            <div class="event-location">
+
+                Vă așteptăm să sărbătorim
+                împreună la
+
+                <br>
+
+                <strong>
+                    Complex Voievod
+                </strong>
+
+                <br>
+
+                Sucevița
+
+            </div>
+
+
+        </section>
+
+
+        <!-- PĂRINȚI -->
+
+        <section class="blessing">
+
+
+            <div class="gold-divider"></div>
+
+
+            <div class="blessing-title">
+
+                Cu binecuvântarea lui
+                <strong>Dumnezeu</strong>
+
+                <br>
+
+                și a părinților noștri
+
+            </div>
+
+
+            <div class="parents">
+
+
+                <!-- PĂRINȚII MIRESEI -->
+
+                <div class="parent-box">
+
+
+                    <div class="parent-title">
+                        Părinții miresei
+                    </div>
+
+
+                    <div class="family-name">
+                        Ghiba
+                    </div>
+
+
+                    <div class="parent-names">
+                        Neculai și Maria
+                    </div>
+
+
+                </div>
+
+
+                <!-- PĂRINȚII MIRELUI -->
+
+                <div class="parent-box">
+
+
+                    <div class="parent-title">
+                        Părinții mirelui
+                    </div>
+
+
+                    <div class="family-name">
+                        Munteanu
+                    </div>
+
+
+                    <div class="parent-names">
+                        Viorel și Maria
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- NAȘI -->
+
+        <section class="godparents">
+
+
+            <div class="godparents-title">
+                Alături de nașii noștri
+            </div>
+
+
+            <div class="godparents-names">
+                Mihalescu Ilie &amp; Melissa
+            </div>
+
+
+        </section>
+
+
+        <!-- MESAJ FINAL -->
+
+        <div class="final-message">
+
+
+            <div class="gold-divider"></div>
+
+
+            <p>
+
+                Fericirea este mai frumoasă
+                atunci când este împărtășită
+                cu oamenii dragi.
+
+            </p>
+
+
+            <p>
+
+                Vă așteptăm cu drag să ne fiți
+                alături și să transformăm împreună
+                această zi într-o amintire
+                de neuitat.
+
+            </p>
+
+
+            <div class="signature">
+
+                Cu drag,
+
+                <br>
+
+                Cosmin &amp; Flaviana
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ÎNAPOI -->
+
+        <a
+            href="index.html"
+            class="back"
+        >
+            ← Înapoi la invitație
+        </a>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- BUTON MUZICĂ -->
+
+<button
+    class="music-button"
+    id="musicButton"
+    aria-label="Pornește sau oprește muzica"
+>
+    ♪
+</button>
+
+
+<script>
+
+    /* ==========================
+       MUZICA
+    ========================== */
+
+    const music =
+        document.getElementById("backgroundMusic");
+
+    const musicButton =
+        document.getElementById("musicButton");
+
+
+    /*
+    Melodia începe de la secunda 30.
+    */
+
+    const startTime = 30;
+
+
+    /*
+    Volum 35%.
+    */
+
+    music.volume = 0.35;
+
+
+    /*
+    Mutăm melodia la secunda 30
+    după încărcarea fișierului.
+    */
+
+    music.addEventListener(
+        "loadedmetadata",
+        function() {
+
+            if (music.duration > startTime) {
+
+                music.currentTime = startTime;
+
+            }
+
+        }
+    );
+
+
+    function playMusic() {
+
+        if (
+            music.currentTime < startTime ||
+            music.ended
+        ) {
+
+            music.currentTime = startTime;
+
+        }
+
+
+        music.play()
+            .then(() => {
+
+                musicButton.textContent = "♫";
+
+            })
+            .catch(() => {
+
+                musicButton.textContent = "♪";
+
+            });
+
+    }
+
+
+    /*
+    Încercăm pornirea automată.
+    */
+
+    playMusic();
+
+
+    /*
+    Dacă telefonul blochează autoplay,
+    prima atingere pornește melodia.
+    */
+
+    function firstInteraction() {
+
+        if (music.paused) {
+
+            playMusic();
+
+        }
+
+
+        document.removeEventListener(
+            "click",
+            firstInteraction
+        );
+
+
+        document.removeEventListener(
+            "touchstart",
+            firstInteraction
+        );
+
+    }
+
+
+    document.addEventListener(
+        "click",
+        firstInteraction
+    );
+
+
+    document.addEventListener(
+        "touchstart",
+        firstInteraction
+    );
+
+
+    /*
+    Pornire / pauză din buton.
+    */
+
+    musicButton.addEventListener(
+        "click",
+        function(event) {
+
+            event.stopPropagation();
+
+
+            if (music.paused) {
+
+                playMusic();
+
+            } else {
+
+                music.pause();
+
+                musicButton.textContent = "♪";
+
+            }
+
+        }
+    );
+
+
+    /*
+    Când melodia se termină,
+    reîncepe de la secunda 30.
+    */
+
+    music.addEventListener(
+        "ended",
+        function() {
+
+            music.currentTime = startTime;
+
+            music.play();
+
+        }
+    );
+
+</script>
+
+
+</body>
+
+</html>
